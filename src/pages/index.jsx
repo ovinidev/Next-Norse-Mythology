@@ -1,11 +1,34 @@
-import styled from 'styled-components'
+/* eslint-disable react/forbid-prop-types */
+import P from 'prop-types';
+import { ThemeProvider } from 'styled-components';
+import { useContext } from 'react';
+import { mapData } from '../api/map-data';
+import { SwitchContext } from '../context/SwitchContext';
+import Home from '../templates/Home';
 
-const Head = styled.h1`
-  background: ${({theme}) => theme.colors.primaryColor}
-`;
-
-export default function Home() {
+export default function Index({ data = null }) {
+  const { theme } = useContext(SwitchContext);
   return (
-    <Head>Oi</Head>
-  )
+    <ThemeProvider theme={theme}>
+      <Home data={data} />
+    </ThemeProvider>
+  );
 }
+
+export const getStaticProps = async () => {
+  const raw = await fetch(
+    'https://norse-mythology-project.herokuapp.com/pages/?slug=mitologia-nordica',
+  );
+  const json = await raw.json();
+  const data = mapData(json)[0];
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+Index.propTypes = {
+  data: P.object,
+};
