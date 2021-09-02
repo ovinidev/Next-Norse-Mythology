@@ -1,11 +1,11 @@
 export const light = {
   title: 'light',
-  
+
   colors: {
-    primaryColor: '#FCCCD4',
-    secondaryColor: '#420516',
+    primaryColor: '#B5FED9',
+    secondaryColor: '#423B0B',
     white: '#ffffff',
-    black: '#0A0909',
+    black: '#35634B',
     background: '#FEF9F9',
     txt: '#0A0909',
 
