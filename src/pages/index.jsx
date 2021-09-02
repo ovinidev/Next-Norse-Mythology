@@ -5,11 +5,13 @@ import { useContext } from 'react';
 import { mapData } from '../api/map-data';
 import { SwitchContext } from '../context/SwitchContext';
 import Home from '../templates/Home';
+import { GlobalStyles } from '../styles/global-styles';
 
 export default function Index({ data = null }) {
   const { theme } = useContext(SwitchContext);
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Home data={data} />
     </ThemeProvider>
   );
