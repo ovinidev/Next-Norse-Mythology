@@ -1,46 +1,34 @@
-# NextJS
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Repositório dedicado aos estudos de React e Javascript.
+## Getting Started
 
-### 👨🏻‍💻 Technologies:
+First, run the development server:
 
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="60"> &nbsp;
-<img src="https://camo.githubusercontent.com/fc9113cfa08cba6a731800ded8a98f520e484a5ea5777671964a66b9779a8692/68747470733a2f2f63646e2e69636f6e73636f75742e636f6d2f69636f6e2f667265652f706e672d3531322f747970657363726970742d313137343936352e706e67" alt="imagem" width="60"> &nbsp;
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-<br>
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<p align="center">
-<img src="https://i.imgur.com/Q6wXoPn.png" width=750px/>
-  
-## **Instalando o node.js:**
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-https://github.com/nodesource/distributions/blob/master/README.md
-  
-```
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
- 
-sudo apt-get install -y nodejs
-```
-  
-## **Para instalar o Yarn:**
-```
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  
-sudo apt update
-sudo apt-get install --no-install-recommends yarn
-  
-yarn install
-```
-## **Criando um projeto React.js:**
-  
-```
-yarn create react-app (nome)
-```
- 
-## **Para instalar o EsLint:**
-```
-yarn add eslint -D
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-yarn eslint --init
-```
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
