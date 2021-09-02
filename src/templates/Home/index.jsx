@@ -2,6 +2,7 @@
 /* eslint-disable prefer-template */
 /* eslint-disable no-unneeded-ternary */
 import P from 'prop-types';
+import Head from 'next/head';
 import { Base } from '../Base';
 
 import { GridTwoColumns } from '../../components/GridTwoColumns';
@@ -12,18 +13,21 @@ import { GridImage } from '../../components/GridImage';
 import { PageNotFound } from '../PageNotFound';
 
 function Home({ data }) {
-  if (!data) {
-    document.title = 'Página não encontrada';
+  if (!data || !data.length) {
     return <PageNotFound />;
   }
 
-  const { menu, sections, footerHtml } = data;
+  const { menu, sections, footerHtml } = data[0];
 
   const {
     links, text, link, srcImg, slug,
   } = menu;
 
   return (
+    <>
+      <Head>
+        <title>Next Nordics</title>
+      </Head>
       <Base
         links={links}
         footerHtml={footerHtml}
@@ -52,11 +56,12 @@ function Home({ data }) {
           return 1;
         })}
       </Base>
+    </>
   );
 }
 
 export default Home;
 
 Home.propTypes = {
-  data: P.object,
+  data: P.array,
 };

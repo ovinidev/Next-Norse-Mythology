@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-concat */
 /* eslint-disable react/forbid-prop-types */
 import P from 'prop-types';
 import { ThemeProvider } from 'styled-components';
@@ -22,7 +23,7 @@ export const getStaticProps = async () => {
     'https://norse-mythology-project.herokuapp.com/pages/?slug=mitologia-nordica',
   );
   const json = await raw.json();
-  const data = mapData(json)[0];
+  const data = mapData(json);
 
   return {
     props: {
@@ -32,5 +33,5 @@ export const getStaticProps = async () => {
 };
 
 Index.propTypes = {
-  data: P.object,
+  data: P.array,
 };

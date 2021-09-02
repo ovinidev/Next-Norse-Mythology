@@ -13,7 +13,6 @@ export const Switcher = ({ toggleTheme }) => {
   return (
     <Container>
       <Switch
-        class
         onChange={toggleTheme}
         checked={title === 'dark'}
         checkedIcon={false}

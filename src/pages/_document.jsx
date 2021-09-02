@@ -37,7 +37,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <title>Next Nordics</title>
         </body>
       </Html>
     );
