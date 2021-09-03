@@ -1,8 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
-/* eslint-disable prefer-template */
-/* eslint-disable no-unneeded-ternary */
 import P from 'prop-types';
 import Head from 'next/head';
+import { useContext } from 'react';
 import { Base } from '../Base';
 
 import { GridTwoColumns } from '../../components/GridTwoColumns';
@@ -11,6 +10,7 @@ import { GridText } from '../../components/GridText';
 import { GridImage } from '../../components/GridImage';
 
 import { PageNotFound } from '../PageNotFound';
+import { SwitchContext } from '../../context/SwitchContext';
 
 function Home({ data }) {
   if (!data || !data.length) {
@@ -23,9 +23,16 @@ function Home({ data }) {
     links, text, link, srcImg, slug,
   } = menu;
 
+  const { theme } = useContext(SwitchContext);
+
   return (
     <>
       <Head>
+        <meta name="theme-color" content={theme.colors.primaryColor} />
+        <meta
+          name="description"
+          content="Um site criado para treinar next e ver o
+        funcionamento" />
         <title>Next Nordics</title>
       </Head>
       <Base

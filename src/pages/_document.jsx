@@ -37,6 +37,8 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Charmonman&family=Grenze+Gotisch:wght@300&family=Indie+Flower&display=swap" rel="stylesheet" />
+
+          <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" alt="Martelo do Thor" />
         </Head>
         <body>
           <Main />
