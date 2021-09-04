@@ -39,6 +39,12 @@ export default class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Charmonman&family=Grenze+Gotisch:wght@300&family=Indie+Flower&display=swap" rel="stylesheet" />
 
           <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossOrigin="anonymous" />
         </Head>
         <body>
           <Main />

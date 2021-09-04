@@ -7,7 +7,7 @@ export const Container = styled.footer`
     text-align: center;
     border-top: 0.1rem solid ${theme.colors.mediumGray};
     background: ${theme.colors.primaryColor};
-    color: ${theme.colors.white};
+    color: ${theme.title === 'dark' ? theme.colors.white : theme.colors.black};
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,12 +23,12 @@ export const Container = styled.footer`
       font-size: 2.8rem;
       margin: 1rem;
       padding-bottom: 1rem;
-      color: ${theme.colors.white};
+      color: ${theme.title === 'dark' ? theme.colors.white : theme.colors.black};
       transition: all 300ms ease-in-out;
     }
 
     i:hover {
-      color: rgb(218, 107, 201);
+      color: ${theme.colors.secondaryColor};
     }
 
     & ${TextComponent} {
