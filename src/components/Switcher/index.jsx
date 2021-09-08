@@ -24,9 +24,18 @@ export const Switcher = ({ toggleTheme }) => {
         onColor={colors.primaryColor}
       />
       {title === 'dark'
-        ? (<Input type="image" alt="moon" src="https://image.flaticon.com/icons/png/512/1152/1152393.png" onClick={toggleTheme} />)
-        : (<Input type="image" alt="sun" src="https://image.flaticon.com/icons/png/512/2907/2907217.png" onClick={toggleTheme} />)}
-
+        ? (
+        <Input
+          type="image"
+          alt="moon"
+          src="https://image.flaticon.com/icons/png/512/1152/1152393.png"
+          onClick={toggleTheme} />)
+        : (
+        <Input
+          type="image"
+          alt="sun"
+          src="https://image.flaticon.com/icons/png/512/2907/2907217.png"
+          onClick={toggleTheme} />)}
     </Container>
   );
 };

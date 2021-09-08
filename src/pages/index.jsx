@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-concat */
 /* eslint-disable react/forbid-prop-types */
 import P from 'prop-types';
 import { ThemeProvider } from 'styled-components';
@@ -18,17 +17,20 @@ export default function Index({ data = null }) {
   );
 }
 
+// Função mais poderosa do Next
 export const getStaticProps = async () => {
   const raw = await fetch(
     'https://norse-mythology-project.herokuapp.com/pages/?slug=mitologia-nordica',
   );
   const json = await raw.json();
+
   const data = mapData(json);
 
   return {
     props: {
       data,
     },
+    revalidate: 30,
   };
 };
 
