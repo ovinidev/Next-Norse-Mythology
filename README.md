@@ -54,7 +54,7 @@ yarn add eslint -D
 yarn eslint --init
 ```
   
-## **Para instalar o styled components
-```
+## **Para instalar o styled components:**
+
 https://drive.google.com/file/d/1_dwKq3IqFhvGs14AyrMZ9z9RiMa1ZeTk/view?usp=sharing
-```
+
