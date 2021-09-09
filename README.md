@@ -2,6 +2,10 @@
 
 Repositório dedicado aos estudos de Next e Typescript.
 
+## **O que é o Next.js?**
+
+https://drive.google.com/file/d/1q5Q7OzXsdoZG4-Fcl7kV6BzTdxZVGOfa/view?usp=sharing
+
 ### 👨🏻‍💻 Technologies:
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="60"> &nbsp;
