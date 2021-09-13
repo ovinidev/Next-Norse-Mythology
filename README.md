@@ -3,7 +3,7 @@
 
 ## **O que é o Next.js?**
 
-https://drive.google.com/file/d/1q5Q7OzXsdoZG4-Fcl7kV6BzTdxZVGOfa/view?usp=sharing
+https://drive.google.com/file/d/1rvZM-rucXo78TDJC29GIwu_U00BKCC3e/view?usp=sharing
 
 ### 👨🏻‍💻 Technologies:
 
