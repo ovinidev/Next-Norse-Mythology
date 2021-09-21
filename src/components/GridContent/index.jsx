@@ -5,7 +5,7 @@ import { TextComponent } from '../TextComponent';
 import * as Styled from './styles';
 
 export const GridContent = ({
-  title, html, background = false, sectionId = '', 
+  title, html, background = false, sectionId = '',
 }) => {
   return (
     <SectionBackground background={background} sectionId={sectionId}>

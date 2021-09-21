@@ -1,14 +1,18 @@
-/* eslint-disable react/forbid-prop-types */
-import P from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { useContext } from 'react';
+import { GetStaticProps } from 'next';
 import { mapData } from '../api/map-data';
 import { SwitchContext } from '../context/SwitchContext';
 import Home from '../templates/Home';
 import { GlobalStyles } from '../styles/global-styles';
 
-export default function Index({ data = null }) {
+export type IndexProps = {
+  data: [];
+};
+
+export default function Index({ data = null }: IndexProps) {
   const { theme } = useContext(SwitchContext);
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
@@ -18,7 +22,7 @@ export default function Index({ data = null }) {
 }
 
 // Função mais poderosa do Next
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const raw = await fetch(
     'https://norse-mythology-project.herokuapp.com/pages/?slug=mitologia-nordica',
   );
@@ -32,8 +36,4 @@ export const getStaticProps = async () => {
     },
     revalidate: 30,
   };
-};
-
-Index.propTypes = {
-  data: P.array,
 };

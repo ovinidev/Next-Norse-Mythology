@@ -2,11 +2,12 @@ import P from 'prop-types';
 import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu';
 import { useContext, useState } from 'react';
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
-import * as Styled from './styles';
 import { LogoLink } from '../LogoLink';
 import { NavLinks } from '../NavLinks';
 import { Switcher } from '../Switcher';
 import { SwitchContext } from '../../context/SwitchContext';
+
+import { Button, Container, MenuContainer } from './styles';
 
 export const Menu = ({ links = [], logoData }) => {
   const [visible, setVisible] = useState(false);
@@ -14,7 +15,7 @@ export const Menu = ({ links = [], logoData }) => {
 
   return (
     <>
-      <Styled.Button
+      <Button
         visible={visible}
         onClick={() => setVisible(true)}
         aria-label="Open/Close menu">
@@ -22,14 +23,14 @@ export const Menu = ({ links = [], logoData }) => {
           <CloseIcon aria-label="Close menu" />
         ) : (
           <MenuIcon aria-label="Open menu" />)}
-      </Styled.Button>
-      <Styled.Container visible={visible} onClick={() => setVisible(false)}>
-        <Styled.MenuContainer>
+      </Button>
+      <Container visible={visible} onClick={() => setVisible(false)}>
+        <MenuContainer>
           <Switcher toggleTheme={toggleTheme} />
           <LogoLink {...logoData} />
           <NavLinks links={links} />
-        </Styled.MenuContainer>
-      </Styled.Container>
+        </MenuContainer>
+      </Container>
     </>
   );
 };

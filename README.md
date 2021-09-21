@@ -9,7 +9,7 @@ Repositório dedicado aos estudos de Next e Typescript.
 
 <hr>
 
-**SPA(Single Page Application)** = Toda interface é construída no front end, 
+**SPA(Single Page Application)** = Toda interface é construída no front end,
 toda mudança de rota continua na mesma página.(Create react app).
 
 **SSR(Server Side Rendering)** = O SSR pode fornecer aos usuários um carregamento mais eficiente da aplicação, já que parte da renderização é feita no servidor. Ou seja, o Next consegue rodar código front-end no lado do servidor.
@@ -19,50 +19,56 @@ toda mudança de rota continua na mesma página.(Create react app).
 <hr>
 
 <p align="center">
-  
+
 ## **Instalando o node.js:**
 
 https://github.com/nodesource/distributions/blob/master/README.md
-  
+
 ```
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
- 
+
 sudo apt-get install -y nodejs
 ```
-  
+
 ## **Para instalar o Yarn:**
 ```
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  
+
 sudo apt update
 sudo apt-get install --no-install-recommends yarn
-  
+
 yarn install
 ```
-## **Criando um projeto Next.js:**
-  
+
+## **Para instalar o Typescript:**
 ```
-yarn create next-app . 
-  
+yarn add -D typescript @types/react @types/node
+```
+
+## **Criando um projeto Next.js:**
+
+```
+yarn create next-app .
+
 yarn dev
 ```
 
 ## **Criando uma build do projeto:**
-  
+
 ```
-yarn build 
-  
+yarn build
+
 yarn start
 ```
- 
+
 ## **Para instalar o EsLint:**
 ```
 yarn add eslint -D
 
 yarn eslint --init
 ```
-  
+
 ## **Para instalar o styled components:**
 
 https://drive.google.com/file/d/1_dwKq3IqFhvGs14AyrMZ9z9RiMa1ZeTk/view?usp=sharing
