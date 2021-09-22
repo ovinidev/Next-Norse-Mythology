@@ -6,6 +6,7 @@ export type LogoLinkProps = {
   text: string,
   srcImg?: string,
   link: string,
+  slug?: string,
 };
 
 export const LogoLink = ({ text, srcImg = '', link }: LogoLinkProps) => {

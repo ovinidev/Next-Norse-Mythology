@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useState } from 'react';
+import { DefaultTheme } from 'styled-components';
 import { light } from '../styles/themes/light';
 import { dark } from '../styles/themes/dark';
 import { usePersistedState } from './usePersistedState';
@@ -6,6 +7,7 @@ import { usePersistedState } from './usePersistedState';
 type SwitchContextProps = {
   children: ReactNode;
   toggleTheme: () => void;
+  theme: DefaultTheme;
 }
 
 export const SwitchContext = createContext({} as SwitchContextProps);

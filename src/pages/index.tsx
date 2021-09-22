@@ -3,14 +3,14 @@ import { useContext } from 'react';
 import { GetStaticProps } from 'next';
 import { mapData } from '../api/map-data';
 import { SwitchContext } from '../context/SwitchContext';
-import Home from '../templates/Home';
+import Home, { HomeProps } from '../templates/Home';
 import { GlobalStyles } from '../styles/global-styles';
 
 export type IndexProps = {
   data: [];
 };
 
-export default function Index({ data = null }: IndexProps) {
+export default function Index({ data = null }: HomeProps) {
   const { theme } = useContext(SwitchContext);
 
   return (
@@ -22,7 +22,7 @@ export default function Index({ data = null }: IndexProps) {
 }
 
 // Função mais poderosa do Next
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const raw = await fetch(
     'https://norse-mythology-project.herokuapp.com/pages/?slug=mitologia-nordica',
   );

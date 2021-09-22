@@ -3,11 +3,16 @@ import { SectionBackground } from '../SectionBackground';
 import { Header } from '../Header';
 import { TextComponent } from '../TextComponent';
 
+export type GridElements = {
+  title: string;
+  description: string;
+}
+
 export type GridTextProps = {
   background: boolean;
   title: string;
   description: string;
-  grid: [title: string, description: string];
+  grid: GridElements[];
   sectionId: string;
 };
 

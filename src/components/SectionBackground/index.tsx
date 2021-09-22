@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import * as Styled from './styles';
+import { Container } from './styles';
 import { SectionContainer } from '../SectionContainer';
 
 export type SectionBackgroundProps = {
@@ -14,13 +14,13 @@ export const SectionBackground = ({
   children,
   background = false,
   sectionId = '',
-}) => {
+}: SectionBackgroundProps) => {
   // eslint-disable-next-line no-unneeded-ternary
   const id = sectionId ? sectionId : random();
 
   return (
-    <Styled.Container background={background} id={id}>
+    <Container background={background} id={id}>
       <SectionContainer>{children}</SectionContainer>
-    </Styled.Container>
+    </Container>
   );
 };

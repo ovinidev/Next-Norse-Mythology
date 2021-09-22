@@ -2,7 +2,11 @@ import styled, { css } from 'styled-components';
 import { GridTwoColumnsProps } from '.';
 import { Title } from '../Header/styles';
 
-export const Container = styled.div<GridTwoColumnsProps>`
+type Background = {
+  background?: boolean;
+}
+
+export const Container = styled.div<Background>`
   ${({ theme, background }) => css`
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -37,7 +41,5 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  ${({ theme }) => css`
-    width: 70%;
-  `}
+  width: 70%;
 `;

@@ -5,11 +5,16 @@ import {
   Container, Grid, GridElement, Image,
 } from './styles';
 
+export type gridElements = {
+  altText: string;
+  srcImg: string;
+}
+
 export type GridImageProps = {
   background: boolean;
   title: string;
   description: string;
-  grid: [altText: string, srcImg: string];
+  grid: gridElements[];
   sectionId: string;
 };
 

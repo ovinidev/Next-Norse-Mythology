@@ -1,4 +1,3 @@
-import P from 'prop-types';
 import { Container } from './styles';
 
 export type TextComponentProps = {

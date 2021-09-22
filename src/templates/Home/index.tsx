@@ -1,18 +1,38 @@
 /* eslint-disable react/forbid-prop-types */
-import P from 'prop-types';
 import Head from 'next/head';
 import { useContext } from 'react';
 import { Base } from '../Base';
 
-import { GridTwoColumns } from '../../components/GridTwoColumns';
-import { GridContent } from '../../components/GridContent';
-import { GridText } from '../../components/GridText';
-import { GridImage } from '../../components/GridImage';
+import { GridTwoColumns, GridTwoColumnsProps } from '../../components/GridTwoColumns';
+import { GridContent, GridContentProps } from '../../components/GridContent';
+import { GridText, GridTextProps } from '../../components/GridText';
+import { GridImage, GridImageProps } from '../../components/GridImage';
 
 import { PageNotFound } from '../PageNotFound';
 import { SwitchContext } from '../../context/SwitchContext';
+import { LogoLinkProps } from '../../components/LogoLink';
+import { MenuLinkProps } from '../../components/MenuLink';
 
-function Home({ data }) {
+export type PageData = {
+  slug: string;
+  title: string;
+  footerHtml: string;
+  menu: LogoLinkProps & { links: MenuLinkProps[] };
+  sections: SectionProps[];
+}
+
+export type SectionProps = (
+  | GridImageProps
+  | GridTextProps
+  | GridTwoColumnsProps
+  | GridContentProps
+) & { component: string };
+
+export type HomeProps = {
+  data: PageData[];
+};
+
+function Home({ data }: HomeProps) {
   if (!data || !data.length) {
     return <PageNotFound />;
   }
@@ -45,19 +65,19 @@ function Home({ data }) {
           const key = `${slug}-${index}`;
 
           if (component === 'section.section-two-columns') {
-            return <GridTwoColumns key={key} {...section} />;
+            return <GridTwoColumns key={key} {...section as GridTwoColumnsProps} />;
           }
 
           if (component === 'section.section-content') {
-            return <GridContent key={key} {...section} />;
+            return <GridContent key={key} {...section as GridContentProps} />;
           }
 
           if (component === 'section.section-grid-text') {
-            return <GridText key={key} {...section} />;
+            return <GridText key={key} {...section as GridTextProps} />;
           }
 
           if (component === 'section.section-grid-image') {
-            return <GridImage key={key} {...section} />;
+            return <GridImage key={key} {...section as GridImageProps} />;
           }
 
           return 1;
@@ -68,7 +88,3 @@ function Home({ data }) {
 }
 
 export default Home;
-
-Home.propTypes = {
-  data: P.array,
-};
