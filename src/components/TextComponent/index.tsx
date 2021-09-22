@@ -1,12 +1,12 @@
 import P from 'prop-types';
 import { Container } from './styles';
 
-export const TextComponent = ({ children }) => {
+export type TextComponentProps = {
+  children: string,
+};
+
+export const TextComponent = ({ children }: TextComponentProps) => {
   return (
     <Container dangerouslySetInnerHTML={{ __html: children }} />
   );
-};
-
-TextComponent.propTypes = {
-  children: P.node.isRequired,
 };

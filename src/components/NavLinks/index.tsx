@@ -1,8 +1,11 @@
-import P from 'prop-types';
-import { MenuLink } from '../MenuLink';
+import { MenuLink, MenuLinkProps } from '../MenuLink';
 import { Container } from './styles';
 
-export const NavLinks = ({ links = [] }) => {
+export type NavLinksProps = {
+  links: MenuLinkProps[];
+};
+
+export const NavLinks = ({ links = [] }: NavLinksProps) => {
   return (
     <Container>
       {links.map((link) => (
@@ -10,14 +13,4 @@ export const NavLinks = ({ links = [] }) => {
       ))}
     </Container>
   );
-};
-
-NavLinks.propTypes = {
-  links: P.arrayOf(
-    P.shape({
-      children: P.string.isRequired,
-      link: P.string.isRequired,
-      newTab: P.bool,
-    }),
-  ).isRequired,
 };

@@ -1,11 +1,16 @@
-import { createContext, useState } from 'react';
+import { createContext, ReactNode, useState } from 'react';
 import { light } from '../styles/themes/light';
 import { dark } from '../styles/themes/dark';
 import { usePersistedState } from './usePersistedState';
 
-export const SwitchContext = createContext();
+type SwitchContextProps = {
+  children: ReactNode;
+  toggleTheme: () => void;
+}
 
-export const SwitchContextProvider = ({ children }) => {
+export const SwitchContext = createContext({} as SwitchContextProps);
+
+export const SwitchContextProvider = ({ children }: SwitchContextProps) => {
   const [theme, setTheme] = useState(light);
 
   const toggleTheme = () => {

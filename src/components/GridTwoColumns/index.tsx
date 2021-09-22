@@ -6,11 +6,11 @@ import { Header } from '../Header';
 import { TextComponent } from '../TextComponent';
 
 export type GridTwoColumnsProps = {
-  title: string,
-  text: string,
-  srcImg: string,
-  background: boolean,
-  sectionId: string,
+  title: string;
+  text: string;
+  srcImg: string;
+  background: boolean;
+  sectionId: string;
 };
 
 export const GridTwoColumns = ({

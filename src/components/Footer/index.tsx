@@ -3,7 +3,7 @@ import { TextComponent } from '../TextComponent';
 import { SectionContainer } from '../SectionContainer';
 
 export type FooterProps = {
-  footerHtml: string,
+  footerHtml: string;
 };
 
 export const Footer = ({ footerHtml }: FooterProps) => {

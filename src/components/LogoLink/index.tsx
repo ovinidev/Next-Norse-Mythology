@@ -4,7 +4,7 @@ import { Header } from '../Header';
 
 export type LogoLinkProps = {
   text: string,
-  srcImg: string,
+  srcImg?: string,
   link: string,
 };
 

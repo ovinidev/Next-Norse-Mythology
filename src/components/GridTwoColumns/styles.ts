@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
+import { GridTwoColumnsProps } from '.';
 import { Title } from '../Header/styles';
 
-export const Container = styled.div`
+export const Container = styled.div<GridTwoColumnsProps>`
   ${({ theme, background }) => css`
     display: grid;
     grid-template-columns: 1fr 2fr;

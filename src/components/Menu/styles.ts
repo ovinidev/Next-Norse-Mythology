@@ -5,7 +5,11 @@ const menuVisible = (theme) => css`
   opacity: 1;
 `;
 
-export const Container = styled.div`
+type MenuVisible = {
+  visible?: boolean;
+}
+
+export const Container = styled.div<MenuVisible>`
   ${({ theme, visible }) => css`
     position: fixed;
     z-index: 5;
@@ -13,7 +17,7 @@ export const Container = styled.div`
     left: 0;
     right: 0;
     transition: all 300ms ease-in-out;
-    
+
     @media ${theme.media.lteMedium} {
       height: 100vh;
       visibility: hidden;
@@ -45,7 +49,7 @@ export const MenuContainer = styled.div`
   `}
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<MenuVisible>`
   ${({ theme, visible }) => css`
     background: ${theme.colors.primaryColor};
     color: ${theme.colors.white};

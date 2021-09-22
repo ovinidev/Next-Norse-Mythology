@@ -4,11 +4,11 @@ import { Header } from '../Header';
 import { TextComponent } from '../TextComponent';
 
 export type GridTextProps = {
-  background: boolean,
-  title: string,
-  description: string,
-  grid: [title: string, description: string]
-  sectionId: string,
+  background: boolean;
+  title: string;
+  description: string;
+  grid: [title: string, description: string];
+  sectionId: string;
 };
 
 export const GridText = ({

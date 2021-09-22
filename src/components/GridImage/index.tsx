@@ -6,11 +6,11 @@ import {
 } from './styles';
 
 export type GridImageProps = {
-  background: boolean,
-  title: string,
-  description: string,
-  grid: [altText: string, srcImg: string],
-  sectionId: string,
+  background: boolean;
+  title: string;
+  description: string;
+  grid: [altText: string, srcImg: string];
+  sectionId: string;
 };
 
 export const GridImage = ({

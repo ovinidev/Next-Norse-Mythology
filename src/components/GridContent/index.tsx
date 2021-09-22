@@ -4,10 +4,10 @@ import { TextComponent } from '../TextComponent';
 import { Container, Html } from './styles';
 
 export type GridContentProps = {
-  title: string,
-  html: string,
-  background: boolean,
-  sectionId: string,
+  title: string;
+  html: string;
+  background: boolean;
+  sectionId: string;
 };
 
 export const GridContent = ({

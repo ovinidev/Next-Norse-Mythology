@@ -1,15 +1,20 @@
-import P from 'prop-types';
 import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu';
 import { useContext, useState } from 'react';
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
-import { LogoLink } from '../LogoLink';
+import { LogoLink, LogoLinkProps } from '../LogoLink';
 import { NavLinks } from '../NavLinks';
 import { Switcher } from '../Switcher';
 import { SwitchContext } from '../../context/SwitchContext';
 
 import { Button, Container, MenuContainer } from './styles';
+import { MenuLinkProps } from '../MenuLink';
 
-export const Menu = ({ links = [], logoData }) => {
+export type MenuProps = {
+  links?: MenuLinkProps[];
+  logoData: LogoLinkProps;
+};
+
+export const Menu = ({ links = [], logoData }: MenuProps) => {
   const [visible, setVisible] = useState(false);
   const { toggleTheme } = useContext(SwitchContext);
 
@@ -33,9 +38,4 @@ export const Menu = ({ links = [], logoData }) => {
       </Container>
     </>
   );
-};
-
-Menu.propTypes = {
-  ...NavLinks.propTypes,
-  logoData: P.shape(LogoLink.propTypes).isRequired,
 };
