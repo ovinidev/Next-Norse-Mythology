@@ -1,5 +1,3 @@
-import P from 'prop-types';
-
 import { useContext } from 'react';
 
 import Switch from 'react-switch';
@@ -7,7 +5,11 @@ import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { Container, Input } from './styles';
 
-export const Switcher = ({ toggleTheme }) => {
+export type SwitcherProps = {
+  toggleTheme: () => void;
+};
+
+export const Switcher = ({ toggleTheme }: SwitcherProps) => {
   const { colors, title } = useContext(ThemeContext);
 
   return (
@@ -25,21 +27,17 @@ export const Switcher = ({ toggleTheme }) => {
       />
       {title === 'dark'
         ? (
-        <Input
-          type="image"
-          alt="moon"
-          src="https://image.flaticon.com/icons/png/512/1152/1152393.png"
-          onClick={toggleTheme} />)
+          <Input
+            type="image"
+            alt="moon"
+            src="https://image.flaticon.com/icons/png/512/1152/1152393.png"
+            onClick={toggleTheme} />)
         : (
-        <Input
-          type="image"
-          alt="sun"
-          src="https://image.flaticon.com/icons/png/512/2907/2907217.png"
-          onClick={toggleTheme} />)}
+          <Input
+            type="image"
+            alt="sun"
+            src="https://image.flaticon.com/icons/png/512/2907/2907217.png"
+            onClick={toggleTheme} />)}
     </Container>
   );
-};
-
-Switcher.propTypes = {
-  toggleTheme: P.func.isRequired,
 };

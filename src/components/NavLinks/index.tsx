@@ -1,14 +1,14 @@
 import P from 'prop-types';
 import { MenuLink } from '../MenuLink';
-import * as Styled from './styles';
+import { Container } from './styles';
 
 export const NavLinks = ({ links = [] }) => {
   return (
-    <Styled.Container>
+    <Container>
       {links.map((link) => (
         <MenuLink key={link.link} {...link} />
       ))}
-    </Styled.Container>
+    </Container>
   );
 };
 

@@ -1,9 +1,9 @@
 import P from 'prop-types';
-import * as Styled from './styles';
+import { Container } from './styles';
 
 export const TextComponent = ({ children }) => {
   return (
-    <Styled.Container dangerouslySetInnerHTML={{ __html: children }} />
+    <Container dangerouslySetInnerHTML={{ __html: children }} />
   );
 };
 

@@ -5,7 +5,7 @@ import { Container as SectionContainer } from '../SectionContainer/styles';
 export const Container = styled.footer`
   ${({ theme }) => css`
     text-align: center;
-    border-top: 0.1rem solid ${theme.colors.mediumGray};
+    border-top: 0.1rem solid ${theme.colors.txt};
     background: ${theme.colors.primaryColor};
     color: ${theme.title === 'dark' ? theme.colors.white : theme.colors.black};
     display: flex;

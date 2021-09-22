@@ -1,11 +1,14 @@
-import P from 'prop-types';
-import * as Styled from './styles';
+import { Container } from './styles';
 import { TextComponent } from '../TextComponent';
 import { SectionContainer } from '../SectionContainer';
 
-export const Footer = ({ footerHtml }) => {
+export type FooterProps = {
+  footerHtml: string,
+};
+
+export const Footer = ({ footerHtml }: FooterProps) => {
   return (
-    <Styled.Container>
+    <Container>
       <SectionContainer>
         <TextComponent>{footerHtml}</TextComponent>
       </SectionContainer>
@@ -20,10 +23,6 @@ export const Footer = ({ footerHtml }) => {
           <i className="fab fa-youtube"></i>
         </a>
       </div>
-    </Styled.Container>
+    </Container>
   );
-};
-
-Footer.propTypes = {
-  footerHtml: P.string.isRequired,
 };

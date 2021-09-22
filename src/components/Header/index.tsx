@@ -1,5 +1,5 @@
 import P from 'prop-types';
-import * as Styled from './styles';
+import { Title } from './styles';
 
 export const Header = ({
   children,
@@ -9,13 +9,13 @@ export const Header = ({
   uppercase = false,
 }) => {
   return (
-    <Styled.Title
+    <Title
       colorDark={colorDark}
       as={as}
       size={size}
       uppercase={uppercase}>
       {children}
-    </Styled.Title>
+    </Title>
   );
 };
 
