@@ -1,4 +1,3 @@
-import { AppProps } from 'next/app';
 import { SwitchContextProvider } from '../context/SwitchContext';
 
 export default function MyApp({ Component, pageProps }) {
@@ -8,5 +7,3 @@ export default function MyApp({ Component, pageProps }) {
     </SwitchContextProvider>
   );
 }
-
-MyApp.propTypes = AppProps;

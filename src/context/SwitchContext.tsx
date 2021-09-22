@@ -6,11 +6,14 @@ import { usePersistedState } from './usePersistedState';
 
 type SwitchContextProps = {
   children: ReactNode;
+}
+
+type SwitchContextData = {
   toggleTheme: () => void;
   theme: DefaultTheme;
 }
 
-export const SwitchContext = createContext({} as SwitchContextProps);
+export const SwitchContext = createContext({} as SwitchContextData);
 
 export const SwitchContextProvider = ({ children }: SwitchContextProps) => {
   const [theme, setTheme] = useState(light);

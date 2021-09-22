@@ -1,5 +1,3 @@
-import { GridContent } from '../components/GridContent';
-
 export default function Page404() {
   return (
     <div>
