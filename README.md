@@ -1,6 +1,9 @@
-# NextJS
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png" width="400">
 
-Repositório dedicado aos estudos de Next e Typescript.
+## **O que é o Next.js?**
+
+https://drive.google.com/file/d/1IXIsPUxTSHtYq02jzmnABaN1mJB0y8k1/view?usp=sharing
 
 ### 👨🏻‍💻 Technologies:
 
