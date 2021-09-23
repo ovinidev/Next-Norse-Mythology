@@ -2,11 +2,11 @@ export const dark = {
   title: 'dark',
 
   colors: {
-    primaryColor: '#423B0B',
-    secondaryColor: '#35634B',
+    primaryColor: '#1F0B48',
+    secondaryColor: '#7641E2',
     white: '#ffffff',
-    black: '#121003',
-    background: '#121003',
+    black: '#110727',
+    background: '#0D061E',
     txt: '#ffffff',
 
   },

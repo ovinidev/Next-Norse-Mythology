@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/api/map-data.js", "src/api/map-menu.js", "src/api/map-sections.js"  ],
   "exclude": [
     "node_modules"
   ]

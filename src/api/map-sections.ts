@@ -1,5 +1,11 @@
+import { GridContentProps } from '../components/GridContent';
+import { gridElements, GridImageProps } from '../components/GridImage';
+import { GridElements, GridTextProps } from '../components/GridText';
+import { GridTwoColumnsProps } from '../components/GridTwoColumns';
+import { SectionProps } from '../templates/Home';
+
 /* eslint-disable */
-export const mapSections = (sections = []) => {
+export const mapSections = (sections = []): SectionProps[] => {
   return sections.map((section) => {
     if (section.__component === 'section.section-two-columns') {
       return mapSectionTwoColumns(section);
@@ -22,7 +28,7 @@ export const mapSections = (sections = []) => {
   });
 };
 
-export const mapSectionTwoColumns = (section = {}) => {
+export const mapSectionTwoColumns = (section = {} as any): GridTwoColumnsProps => {
   const {
     __component: component = '',
     title = '',
@@ -41,7 +47,7 @@ export const mapSectionTwoColumns = (section = {}) => {
   };
 };
 
-export const mapSectionContent = (section = {}) => {
+export const mapSectionContent = (section = {} as any): GridContentProps => {
   const {
     __component: component = '',
     title = '',
@@ -58,9 +64,9 @@ export const mapSectionContent = (section = {}) => {
   };
 };
 
-export const mapTextGrid = (section = {}) => {
+export const mapTextGrid = (section = {} as any)
+  : GridTextProps => {
   const {
-    __component: component = '',
     title = '',
     description = '',
     metadata: { background = false, section_id: sectionId = '' } = false,
@@ -73,7 +79,7 @@ export const mapTextGrid = (section = {}) => {
     background,
     sectionId,
     description,
-    grid: grid.map((text) => {
+    grid: grid.map((text: any): GridElements => {
       const { title = '', description = '' } = text;
       return {
         title,
@@ -83,9 +89,8 @@ export const mapTextGrid = (section = {}) => {
   };
 };
 
-export const mapImageGrid = (section = {}) => {
+export const mapImageGrid = (section = {} as any): GridImageProps => {
   const {
-    __component: component = '',
     title = '',
     description = '',
     metadata: { background = false, section_id: sectionId = '' } = false,
@@ -98,7 +103,7 @@ export const mapImageGrid = (section = {}) => {
     background,
     sectionId,
     description,
-    grid: grid.map((img) => {
+    grid: grid.map((img: any): gridElements => {
       const {
         image: { url: srcImg = '', alternativeText: altText = '' } = '',
       } = img;

@@ -11,6 +11,7 @@ export type GridTwoColumnsProps = {
   srcImg: string;
   background: boolean;
   sectionId: string;
+  component?: string;
 };
 
 export const GridTwoColumns = ({

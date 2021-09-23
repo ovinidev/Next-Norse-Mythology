@@ -3,9 +3,9 @@ export const light = {
 
   colors: {
     primaryColor: '#B5FED9',
-    secondaryColor: '#423B0B',
+    secondaryColor: '#59C78F',
     white: '#ffffff',
-    black: '#35634B',
+    black: '#59C78F',
     background: '#FEF9F9',
     txt: '#0A0909',
 

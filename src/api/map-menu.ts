@@ -1,4 +1,7 @@
-export const mapMenu = (menu = {}) => {
+import { MenuLinkProps } from '../components/MenuLink';
+import { PageData } from '../templates/Home';
+
+export const mapMenu = (menu = {} as any): PageData['menu'] => {
   const {
     open_in_new_tab: newTab = false,
     logo: text = '',
@@ -16,8 +19,8 @@ export const mapMenu = (menu = {}) => {
   };
 };
 
-export const mapMenuLinks = (links = []) => {
-  return links.map((item) => {
+export const mapMenuLinks = (links = [] as any[]): MenuLinkProps[] => {
+  return links.map((item: any): MenuLinkProps => {
     const {
       open_in_new_tab: newTab = false,
       link_text: children = '',

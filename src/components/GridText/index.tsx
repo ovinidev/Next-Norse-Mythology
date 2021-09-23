@@ -14,6 +14,7 @@ export type GridTextProps = {
   description: string;
   grid: GridElements[];
   sectionId: string;
+  component?: string;
 };
 
 export const GridText = ({

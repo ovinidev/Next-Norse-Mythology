@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  color: ${({ theme }) => theme.colors.white} ;
   display: flex;
   align-items: center;
   justify-content: center;
